@@ -15,7 +15,7 @@ install:
   - bundle exec rake db:migrate RAILS_ENV=test
 script:
   - bundle exec rubocop ../foreman_snapshot_management
-  - bundle exec rake test:foreman_snapshot_management
+  - bundle exec rake test
 env:
   global:
     - TESTOPTS=-v
