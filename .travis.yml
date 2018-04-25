@@ -13,6 +13,8 @@ install:
   - ln -s database.yml.example config/database.yml
   - bundle install --jobs=3 --retry=3 --without journald development postgresql mysql2 console
   - bundle exec rake db:migrate RAILS_ENV=test
+  - npm install
+  - bundle exec rake webpack:compile
 script:
   - bundle exec rubocop ../foreman_snapshot_management
   - bundle exec rake test
